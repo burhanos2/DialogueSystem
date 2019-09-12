@@ -7,11 +7,8 @@ public class Dialogue : MonoBehaviour
 {
     [SerializeField]
     private Dialogue_Trigger trig;
-    [SerializeField]
-    private SimpleMovement movement;
 
-    public static Action stopMovement;
-    public static Action startMovement;
+    public Action dialogueStop;
 
     private void Awake()
     {
@@ -20,7 +17,21 @@ public class Dialogue : MonoBehaviour
 
     void DialogueStartRoutine()
     {
-        stopMovement?.Invoke();
+        Time.timeScale = 0;
+
+        //
+        PlayDialogue();
+    }
+
+    void DialogueEndRoutine()
+    {
+
+        //
+        Time.timeScale = 1;
+    }
+
+    private void PlayDialogue()
+    {
 
     }
 }

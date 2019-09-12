@@ -9,6 +9,12 @@ public class GuideButton : MonoBehaviour
     private NPC_ProximityTrigger triggerDel;
 
     [SerializeField]
+    private Dialogue triggerEnd;
+
+    [SerializeField]
+    Dialogue_Trigger buttonPress;
+
+    [SerializeField]
     Renderer buttonImage;
 
 
@@ -27,7 +33,7 @@ public class GuideButton : MonoBehaviour
         buttonImage.enabled = false;
         triggerDel.PlayerEnterNPC += ShowButton;
         triggerDel.PlayerExitNPC += HideButton;
-        Dialogue.stopMovement += HideButton;
-        Dialogue.startMovement += ShowButton;
+        buttonPress.dialogueStart += HideButton;
+        triggerEnd.dialogueStop += ShowButton;
     }
 }

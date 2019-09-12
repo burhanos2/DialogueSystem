@@ -961,7 +961,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trig: {fileID: 1660201973}
-  movement: {fileID: 0}
 --- !u!1 &1667769684
 GameObject:
   m_ObjectHideFlags: 0
@@ -1185,7 +1184,7 @@ TextMesh:
   m_GameObject: {fileID: 1965923791}
   m_Text: SPACE
   m_OffsetZ: 0
-  m_CharacterSize: 2
+  m_CharacterSize: 1
   m_LineSpacing: 1
   m_Anchor: 4
   m_Alignment: 1
@@ -1224,4 +1223,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerDel: {fileID: 1660201972}
+  triggerEnd: {fileID: 1660201974}
+  buttonPress: {fileID: 1660201973}
   buttonImage: {fileID: 1965923792}
