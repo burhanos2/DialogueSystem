@@ -804,7 +804,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: cac1b713ee7f07b4ea11558244e0651c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1ad9546351063e64e85e46957c96c594, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.685
   m_Pitch: 1
@@ -1040,6 +1040,7 @@ GameObject:
   - component: {fileID: 1556670605}
   - component: {fileID: 1556670607}
   - component: {fileID: 1556670606}
+  - component: {fileID: 1556670608}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -1111,6 +1112,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1556670604}
   m_CullTransparentMesh: 0
+--- !u!114 &1556670608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556670604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46770a178d57e584296d7ca6b80d308c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _text: {fileID: 1556670606}
 --- !u!1 &1660201965
 GameObject:
   m_ObjectHideFlags: 0
@@ -1276,6 +1290,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trig: {fileID: 1660201973}
   canvas: {fileID: 2112485089}
+  _textEffect: {fileID: 1556670608}
 --- !u!1 &1667769684
 GameObject:
   m_ObjectHideFlags: 0

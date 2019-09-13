@@ -11,20 +11,27 @@ public class Dialogue : MonoBehaviour
     [SerializeField]
     private Canvas canvas;
 
+    [SerializeField]
+    private TextEffect _textEffect;
+
     public Action dialogueStop;
+
+    private IEnumerator enumerator;
+    private string line = "";
 
     private void Awake()
     {
         canvas.enabled = false;
-        trig.dialogueStart += DialogueStartRoutine;
+        trig.dialogueStart += OnDialogueStart;
     }
 
-    void DialogueStartRoutine()
+    void OnDialogueStart()
     {
         Time.timeScale = 0;
         canvas.enabled = true;
+
         //
-        PlayDialogue();
+        SayLine(0.1f, "Testing playdialogue call");
     }
 
     void DialogueEndRoutine()
@@ -34,8 +41,13 @@ public class Dialogue : MonoBehaviour
         Time.timeScale = 1;
     }
 
-    private void PlayDialogue()
+    private void SayLine(float aSpeed, string aLine)
     {
+        _textEffect.EmptyText();
+        _textEffect.SetSpeed(aSpeed);
+        line = aLine;
 
+        enumerator = _textEffect.TypingEffect(line);
+        StartCoroutine(enumerator);
     }
 }
