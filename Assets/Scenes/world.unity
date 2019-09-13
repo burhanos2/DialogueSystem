@@ -1275,7 +1275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trig: {fileID: 1660201973}
-  can: {fileID: 2112485089}
+  canvas: {fileID: 2112485089}
 --- !u!1 &1667769684
 GameObject:
   m_ObjectHideFlags: 0
