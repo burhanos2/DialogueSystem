@@ -1,12 +1,12 @@
 # DialogueSystem in Unity
-This is a little dialogue system that will read lines from XML files. It will also have branching dialogue paths.
+This is a dialogue system that will read lines from XML files. It will also have branching dialogue paths.
 
 ## Features
 Links to bits of code.
 {WIP}
-- [algorithm](link)
-- [A Mechanic](link)
-- [Unique thing](link)
+- [Dialogue scripts](/Assets/Scripts/Dialogue)
+- [Scenario scripts](/Assets/Scripts/Scenario)
+- [Looping beat I made as background sound](/Assets/Sounds/Music/beat.ogg)
 
 ## Software Analysis
 I have decided to opt with Unity C# because I have the most experience in Unity, so that way I will have less obstacles to overcome that are related to the software.
