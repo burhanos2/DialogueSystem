@@ -6,12 +6,8 @@ using UnityEngine.UI;
 public class TextEffect : MonoBehaviour
 {
     public Text _text;
-    private float textSpeed;
+    public float textSpeed { get; set; }
 
-    public void SetSpeed(float aSpeed)
-    {
-        textSpeed = aSpeed;
-    }
 
    public IEnumerator TypingEffect(string aText)
     {

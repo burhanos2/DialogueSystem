@@ -61,9 +61,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Dialogue\Dialogue.cs" />
+    <Compile Include="Assets\Scripts\Dialogue\Dialogue_Manager.cs" />
     <Compile Include="Assets\Scripts\Dialogue\Dialogue_Trigger.cs" />
     <Compile Include="Assets\Scripts\Dialogue\TextEffect.cs" />
-    <Compile Include="Assets\Scripts\Dialogue\XML_Reader.cs" />
     <Compile Include="Assets\Scripts\Scenario\GuideButton.cs" />
     <Compile Include="Assets\Scripts\Scenario\NPC_ProximityTrigger.cs" />
     <Compile Include="Assets\Scripts\Scenario\SimpleMovement.cs" />

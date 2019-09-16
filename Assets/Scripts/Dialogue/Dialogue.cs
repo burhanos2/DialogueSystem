@@ -44,7 +44,7 @@ public class Dialogue : MonoBehaviour
     private void SayLine(float aSpeed, string aLine)
     {
         _textEffect.EmptyText();
-        _textEffect.SetSpeed(aSpeed);
+        _textEffect.textSpeed =  aSpeed;
         line = aLine;
 
         enumerator = _textEffect.TypingEffect(line);
