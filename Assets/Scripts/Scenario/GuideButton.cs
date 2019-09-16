@@ -6,10 +6,10 @@ using UnityEngine.UI;
 public class GuideButton : MonoBehaviour
 {
     [SerializeField]
-    private NPC_ProximityTrigger triggerDel;
+    private NPC_ProximityTrigger triggerOfNPC;
 
     [SerializeField]
-    private Dialogue triggerEnd;
+    private Dialogue_Manager triggerEnd;
 
     [SerializeField]
     Dialogue_Trigger buttonPress;
@@ -31,8 +31,8 @@ public class GuideButton : MonoBehaviour
     private void Awake()
     {
         buttonImage.enabled = false;
-        triggerDel.PlayerEnterNPC += ShowButton;
-        triggerDel.PlayerExitNPC += HideButton;
+        triggerOfNPC.PlayerEnterNPC += ShowButton;
+        triggerOfNPC.PlayerExitNPC += HideButton;
         buttonPress.dialogueStart += HideButton;
         triggerEnd.dialogueStop += ShowButton;
     }

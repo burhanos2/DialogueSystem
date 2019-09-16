@@ -1275,7 +1275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c3804a00ea6b904095332d739bf425f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueKey: 32
+  dialogueInitiationKey: 32
 --- !u!114 &1660201974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1291,6 +1291,8 @@ MonoBehaviour:
   trig: {fileID: 1660201973}
   canvas: {fileID: 2112485089}
   _textEffect: {fileID: 1556670608}
+  jsonPath: ../../Json/greenman.json
+  dialogueButton: 32
 --- !u!1 &1667769684
 GameObject:
   m_ObjectHideFlags: 0
@@ -1552,7 +1554,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a291f54383edd9c44a24ef008f7ab2e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerDel: {fileID: 1660201972}
+  triggerOfNPC: {fileID: 1660201972}
   triggerEnd: {fileID: 1660201974}
   buttonPress: {fileID: 1660201973}
   buttonImage: {fileID: 1965923792}

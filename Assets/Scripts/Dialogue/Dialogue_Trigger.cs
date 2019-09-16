@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Dialogue_Trigger : MonoBehaviour
 {
-   public KeyCode dialogueKey;
+   public KeyCode dialogueInitiationKey;
     public Action dialogueStart;
 
     private void OnTriggerStay(Collider other)
     {
         if (other.tag == "Player")
         { 
-             if (Input.GetKeyDown(dialogueKey))
+             if (Input.GetKeyDown(dialogueInitiationKey))
              {
              dialogueStart?.Invoke();
              }

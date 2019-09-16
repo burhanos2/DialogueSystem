@@ -32,4 +32,5 @@ Here I will link the sources I have made use of.
 
 - [Unity Docs](https://docs.unity3d.com) 
 - [Youtube video: Unity Dialogue system](https://www.youtube.com/watch?v=1GclTlASwLE)
+- [Youtube video: Unity3D HowTo: Serializing & Reading JSON in your game](https://www.youtube.com/watch?v=fesZnOaSXT4)
 

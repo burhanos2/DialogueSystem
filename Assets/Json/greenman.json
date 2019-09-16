@@ -1,0 +1,12 @@
+{
+  "Id": 1,
+  "Name": "green man",
+  "Speed" : 0.05,
+  "Lines": [
+    "Well Hello there",
+    "I am mr green"
+
+  ]
+
+
+}
