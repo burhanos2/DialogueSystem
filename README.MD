@@ -31,6 +31,7 @@ The remaining 2 days of week #2 will be spent implementing it into my portfolio,
 Here I will link the sources I have made use of.
 
 - [Unity Docs](https://docs.unity3d.com) 
-- [Youtube video: Unity Dialogue system](https://www.youtube.com/watch?v=1GclTlASwLE)
-- [Youtube video: Unity3D HowTo: Serializing & Reading JSON in your game](https://www.youtube.com/watch?v=fesZnOaSXT4)
+- [Youtube video: Unity Dialogue system](https://www.youtube.com/watch?v=1GclTlASwLE) took some code pattern inspiration from this video.
+- [Unity Docs: JSON serialisation](https://docs.unity3d.com/Manual/JSONSerialization.html) 
+- [Unity Docs: JsonUtility](https://docs.unity3d.com/ScriptReference/JsonUtility.html)
 
