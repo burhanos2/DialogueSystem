@@ -3,12 +3,14 @@ This is a dialogue system that will read lines from Json files. It will also hav
 
 ## Where do I find the json files to edit?
 it is in:
-../AppData/LocalLow/BurhanTopaloglu/DialogueSystem/greenman.json
-windows:
-press Windows+R
-enter the following
-- %userprofile%\AppData\LocalLow\BurhanTopaloglu\DialogueSystem
-press ok or enter
+..\AppData\LocalLow\BurhanTopaloglu\DialogueSystem
+how do you get there?
+
+### windows:
+- press Windows+R
+- enter the following
+> %userprofile%\AppData\LocalLow\BurhanTopaloglu\DialogueSystem
+- press ok or enter
 
 ## Features
 Links to bits of code:
