@@ -2,8 +2,8 @@
 This is a dialogue system that will read lines from Json files. It will also have branching dialogue paths.
 
 ## Where do I find the json files to edit?
-it is in:
-..\AppData\LocalLow\BurhanTopaloglu\DialogueSystem
+it is in: <br/>
+..\AppData\LocalLow\BurhanTopaloglu\DialogueSystem <br/>
 how do you get there?
 
 ### windows:
