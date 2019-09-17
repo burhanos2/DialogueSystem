@@ -1,7 +1,7 @@
 # DialogueSystem in Unity
 This is a dialogue system that will read lines from Json files. It will also have branching dialogue paths.
 
-##Where do I find the json files to edit?
+## Where do I find the json files to edit?
 it is in:
 ../AppData/LocalLow/BurhanTopaloglu/DialogueSystem/greenman.json
 windows:
