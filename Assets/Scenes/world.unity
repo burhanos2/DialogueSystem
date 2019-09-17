@@ -1125,6 +1125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _text: {fileID: 1556670606}
+  dialogueSkipButton: 32
 --- !u!1 &1660201965
 GameObject:
   m_ObjectHideFlags: 0
@@ -1293,7 +1294,7 @@ MonoBehaviour:
   canvas: {fileID: 2112485089}
   _textEffect: {fileID: 1556670608}
   dialogueButton: 32
-  jsonPath: greenman.json
+  jsonData: {fileID: 1660201975}
 --- !u!114 &1660201975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1311,13 +1312,6 @@ MonoBehaviour:
     name: 
     textSpeed: 0
     dialogueLines: []
-  name: greenman
-  textSpeed: 0.1
-  dialogueLines:
-  - Hello there
-  - Nice to meet you
-  - I am the green man
-  - goodbye
 --- !u!1 &1667769684
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,7 +11,7 @@ public class JsonData : MonoBehaviour
     private JsonWrapper _wrapper = new JsonWrapper();
 
     [SerializeField]
-    NPCData npcData = new NPCData();
+    public NPCData npcData = new NPCData();
 
     /*
     [SerializeField]

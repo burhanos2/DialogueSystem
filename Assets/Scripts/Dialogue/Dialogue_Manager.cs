@@ -20,18 +20,20 @@ public class Dialogue_Manager : MonoBehaviour
     
     [SerializeField]
     private KeyCode dialogueButton;
+
+    [SerializeField]
+    private JsonData jsonData;
     
     #endregion
 
     //Variables
     public Action dialogueStop;
     private IEnumerator enumerator;
+    private bool dialogueActive;
 
     private string line = "";
-    public string jsonPath;
-
-    private bool dialogueEnded = false;
-    private int dialogueIndex;
+    private int dialogueIndex = 0;
+    private float _speed;
 
     private void Awake()
     {
@@ -39,13 +41,13 @@ public class Dialogue_Manager : MonoBehaviour
         trig.dialogueStart += OnDialogueStart;
     }
 
-    private void SayLine(float aSpeed, string aLine)
+    private void SayLine(string aLine)
     {
         _textEffect.EmptyText();
-        _textEffect.textSpeed = aSpeed;
+        _textEffect.textSpeed = _speed;
         line = aLine;
 
-        enumerator = _textEffect.TypingEffect(line);
+        enumerator = _textEffect.TypingEffect(line, _speed);
         StartCoroutine(enumerator);
     }
 
@@ -54,20 +56,20 @@ public class Dialogue_Manager : MonoBehaviour
 
     void OnDialogueStart()
     {
+        dialogueActive = true;
         Time.timeScale = 0;
         canvas.enabled = true;
+        _speed = jsonData.npcData.textSpeed;
 
-        //
-        SayLine(0.1f, "Testing playdialogue call");
+        SayLine(jsonData.npcData.dialogueLines[0]);
     }
 
     void OnDialogueEnd()
     {
-
-        //
         _textEffect.EmptyText();
         canvas.enabled = false;
         Time.timeScale = 1;
+        dialogueActive = false;
     }
 
     #endregion
@@ -79,12 +81,8 @@ public class Dialogue_Manager : MonoBehaviour
     { }
     void Close()
     { }
-    
+
     #endregion
 
-    private void Update()
-    {
-        if(Input.GetKey(dialogueButton) && dialogueEnded)
-        { OnDialogueEnd(); }
-    }
+   
 }
