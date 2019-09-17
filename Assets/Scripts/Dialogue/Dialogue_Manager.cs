@@ -28,8 +28,11 @@ public class Dialogue_Manager : MonoBehaviour
 
     //Variables
     public Action dialogueStop;
+    public Action dialogueInactive;
+
     private IEnumerator enumerator;
-    private bool dialogueActive;
+    private bool textActive = false;
+    private bool dialogueActive = false;
 
     private string line = "";
     private int dialogueIndex = 0;
@@ -39,15 +42,18 @@ public class Dialogue_Manager : MonoBehaviour
     {
         canvas.enabled = false;
         trig.dialogueStart += OnDialogueStart;
+        dialogueInactive += OnDialogueInactive;
+        dialogueStop += OnDialogueEnd;
     }
 
     private void SayLine(string aLine)
     {
+        textActive = true;
         _textEffect.EmptyText();
         _textEffect.textSpeed = _speed;
         line = aLine;
 
-        enumerator = _textEffect.TypingEffect(line, _speed);
+        enumerator = _textEffect.TypingEffect(line, _speed, dialogueInactive);
         StartCoroutine(enumerator);
     }
 
@@ -60,29 +66,57 @@ public class Dialogue_Manager : MonoBehaviour
         Time.timeScale = 0;
         canvas.enabled = true;
         _speed = jsonData.npcData.textSpeed;
+    }
 
-        SayLine(jsonData.npcData.dialogueLines[0]);
+    void OnDialogueInactive()
+    {
+        textActive = false;
     }
 
     void OnDialogueEnd()
     {
+        dialogueActive = false;
         _textEffect.EmptyText();
         canvas.enabled = false;
         Time.timeScale = 1;
-        dialogueActive = false;
+        dialogueIndex = 0;
     }
 
     #endregion
 
-    //Dialogue Management
-    #region dialogueManagement
+    //Dialogue Logic
+    #region dialogueLogic
 
-    void Open()
-    { }
-    void Close()
-    { }
+    private void Next()
+    {
+        SayLine(jsonData.npcData.dialogueLines[dialogueIndex]);
+        dialogueIndex++;
+    }
+
+    private void CheckDialogue()
+    {
+            if (IsIndexInRange())
+            {
+                Next();
+            }
+            else
+            {
+                dialogueStop();
+            }
+    }
+
+    private bool IsIndexInRange()
+    {
+        return dialogueIndex < jsonData.npcData.dialogueLines.Count;
+    }
 
     #endregion
 
-   
+    private void Update()
+    {
+        if (dialogueActive && !textActive && Input.GetKeyDown(dialogueButton))
+        {
+            CheckDialogue();
+        }
+    }
 }

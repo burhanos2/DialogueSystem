@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class TextEffect : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class TextEffect : MonoBehaviour
     private KeyCode dialogueSkipButton;
 
 
-   public IEnumerator TypingEffect(string aText, float aSpeed)
+   public IEnumerator TypingEffect(string aText, float aSpeed, Action callback)
     {
         savedSpeed = aSpeed;
         textSpeed = aSpeed;
@@ -22,6 +23,7 @@ public class TextEffect : MonoBehaviour
             _text.text += character;
             yield return new WaitForSecondsRealtime(textSpeed);
         }
+        callback();
     }
 
     public void EmptyText()
