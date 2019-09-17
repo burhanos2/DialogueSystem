@@ -1,12 +1,8 @@
 {
-  "Id": 1,
-  "Name": "green man",
-  "Speed" : 0.05,
-  "Lines": [
+  "_name": "green man",
+  "_dialogueSpeed" : 0.05,
+  "_dialogueLines": [
     "Well Hello there",
     "I am mr green"
-
   ]
-
-
 }

@@ -17,24 +17,21 @@ public class Dialogue_Manager : MonoBehaviour
     [SerializeField]
     private TextEffect _textEffect;
 
-    [SerializeField]
-    private string jsonPath;
-
+    
     [SerializeField]
     private KeyCode dialogueButton;
-
+    
     #endregion
 
     //Variables
     public Action dialogueStop;
     private IEnumerator enumerator;
+
     private string line = "";
+    public string jsonPath;
 
     private bool dialogueEnded = false;
     private int dialogueIndex;
-    private List<string> dialogueLines;
-
-
 
     private void Awake()
     {

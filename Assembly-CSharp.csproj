@@ -62,6 +62,9 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Dialogue\Dialogue_Manager.cs" />
     <Compile Include="Assets\Scripts\Dialogue\Dialogue_Trigger.cs" />
+    <Compile Include="Assets\Scripts\Dialogue\JsonData.cs" />
+    <Compile Include="Assets\Scripts\Dialogue\JsonWrapper.cs" />
+    <Compile Include="Assets\Scripts\Dialogue\NPCData.cs" />
     <Compile Include="Assets\Scripts\Dialogue\TextEffect.cs" />
     <Compile Include="Assets\Scripts\Scenario\GuideButton.cs" />
     <Compile Include="Assets\Scripts\Scenario\NPC_ProximityTrigger.cs" />

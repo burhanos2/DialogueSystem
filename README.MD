@@ -32,6 +32,7 @@ Here I will link the sources I have made use of.
 
 - [Unity Docs](https://docs.unity3d.com) 
 - [Youtube video: Unity Dialogue system](https://www.youtube.com/watch?v=1GclTlASwLE) took some code pattern inspiration from this video.
+- [Youtube video: Using Json files](https://www.youtube.com/watch?v=Y8XCoEt7zTU)
 - [Unity Docs: JSON serialisation](https://docs.unity3d.com/Manual/JSONSerialization.html) 
 - [Unity Docs: JsonUtility](https://docs.unity3d.com/ScriptReference/JsonUtility.html)
 
