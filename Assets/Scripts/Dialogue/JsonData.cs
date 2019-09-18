@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class JsonData : MonoBehaviour
 {
+    //make it save when there is no file. maybe add customizability in editor
     [SerializeField]
     private string fileName;
     
@@ -13,30 +14,24 @@ public class JsonData : MonoBehaviour
     [SerializeField]
     public NPCData npcData = new NPCData();
 
-    /*
-    [SerializeField]
-    private string name;
-    [SerializeField]
-    public float textSpeed = 0;
-    [SerializeField]
-    public List<string> dialogueLines = new List<string>();
-    */
-
+    //Application.persistentDataPath can be used to store to and read from appdata
     private void Awake()
     {
         if (fileName != null)
         {
-            filePath = Application.persistentDataPath + "/" + fileName;
-            Debug.Log(filePath);
+            filePath = Application.dataPath + "/Json/" + fileName;
+            Debug.Log("successfully loaded in: " + filePath);
         }
         else
         {
-            filePath = Application.persistentDataPath + "/" + "default.json";
-            Debug.Log(filePath);
+            filePath = Application.dataPath + "/Json/" + "default.json";
+            Debug.Log("no file set, loaded in: " + filePath);
         }
         npcData = _wrapper.ReadData(filePath);
     }
         /* 
+         this bit is for saving, which I wont use for now, im keeping it in here for later.
+
         if (Input.GetKeyDown(KeyCode.S))
         {
             npcData.name = name;

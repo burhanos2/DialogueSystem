@@ -1,0 +1,15 @@
+{
+    "npcData": {
+        "name": "greenman",
+        "textSpeed": 0.2000000149011612,
+        "colorRed": 0,
+        "colorGreen": 255,
+        "colorBlue": 0,
+        "dialogueLines": [
+            "Hello there!",
+            "Nice to meet you!",
+            "I am the green man.",
+            "goodbye."
+        ]
+    }
+}

@@ -23,6 +23,9 @@ public class Dialogue_Manager : MonoBehaviour
 
     [SerializeField]
     private JsonData jsonData;
+
+    [SerializeField]
+    private DialogueName dialogueName;
     
     #endregion
 
@@ -37,6 +40,8 @@ public class Dialogue_Manager : MonoBehaviour
     private string line = "";
     private int dialogueIndex = 0;
     private float _speed;
+
+    private NPCData npcData;
 
     private void Awake()
     {
@@ -62,10 +67,16 @@ public class Dialogue_Manager : MonoBehaviour
 
     void OnDialogueStart()
     {
+        npcData = jsonData.npcData;
+
+        Color newColor = new Color(npcData.colorRed, npcData.colorGreen, npcData.colorBlue, 255f);
+        _textEffect.ChangeColor(newColor);
+        dialogueName.SetName(npcData.name, newColor);
+
         dialogueActive = true;
         Time.timeScale = 0;
         canvas.enabled = true;
-        _speed = jsonData.npcData.textSpeed;
+        _speed = npcData.textSpeed;
     }
 
     void OnDialogueInactive()
@@ -89,7 +100,7 @@ public class Dialogue_Manager : MonoBehaviour
 
     private void Next()
     {
-        SayLine(jsonData.npcData.dialogueLines[dialogueIndex]);
+        SayLine(npcData.dialogueLines[dialogueIndex]);
         dialogueIndex++;
     }
 
@@ -107,7 +118,7 @@ public class Dialogue_Manager : MonoBehaviour
 
     private bool IsIndexInRange()
     {
-        return dialogueIndex < jsonData.npcData.dialogueLines.Count;
+        return dialogueIndex < npcData.dialogueLines.Count;
     }
 
     #endregion

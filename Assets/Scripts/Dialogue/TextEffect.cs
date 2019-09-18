@@ -31,6 +31,11 @@ public class TextEffect : MonoBehaviour
         _text.text = "";
     }
 
+    public void ChangeColor(Color aColor)
+    {
+        _text.color = aColor;
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(dialogueSkipButton))

@@ -1,0 +1,11 @@
+{
+    "npcData": {
+        "name": "martijn",
+        "textSpeed": 0.300000149011612,
+        "colorRed": 0, "colorGreen": 0, "colorBlue": 0,
+      "dialogueLines": [
+        "I am not quite fond of your kind of people.",
+        "just leave"
+      ]
+    }
+}

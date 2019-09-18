@@ -8,6 +8,8 @@ public class JsonWrapper
     public NPCData npcData;
 
     /*
+     this bit is for saving, which I wont use for now, I am keeping it in here for later
+
     public void SaveData(string filePath, NPCData npc)
     {
         JsonWrapper wrapper = new JsonWrapper();

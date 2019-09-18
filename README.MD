@@ -1,6 +1,7 @@
 # DialogueSystem in Unity
 This is a dialogue system that will read lines from Json files. It will also have branching dialogue paths.
 
+<!--
 ## Where do I find the json files to edit?
 it is in: <br/>
 ..\AppData\LocalLow\BurhanTopaloglu\DialogueSystem <br/>
@@ -11,6 +12,9 @@ how do you get there?
 - enter the following
 > %userprofile%\AppData\LocalLow\BurhanTopaloglu\DialogueSystem
 - press ok or enter
+
+this bit can be uncommented if one decides to use appdata as the json filepath, however as it is now the filepath is set to the project folder
+-->
 
 ## Features
 Links to bits of code:
